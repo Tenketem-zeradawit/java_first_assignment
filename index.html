@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+function calculateArea() {
+           
+           var a = 5;
+           var b = 6;
+           var c = 7;
+           var s = (a + b + c) / 2;
+
+           // Calculate the area using Heron's formula
+           var area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+           document.getElementById("result1").innerText = "Area of the triangle: " + area;
+       }
+
+function multiplicationNumbers(){
+
+var num1 = parseFloat(document.getElementById("num1").value);
+ var num2 = parseFloat(document.getElementById("num2").value);         
+ var result = num1 * num2;
+ document.getElementById("result").innerText = "Multiplication result: " + result;
+
+
+}
+function calculate(){
+
+    var num1 = parseFloat(document.getElementById("num1").value);
+ var num2 = parseFloat(document.getElementById("num2").value);         
+ var result = num1 / num2;
+ document.getElementById("result").innerText = "divide result: " + result;
+
+}
+
+
+</script>
+
+ <style>
+
+button{
+    background-color: rgb(234, 244, 241);
+    color:black;
+   
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+ </style>
+</head>
+<body>
+
+    <div>
+        <h1>Area of a Triangle with Sides  all sides is given 5, 6, 7</h1>
+        <p> var a = 5;</p>
+        <p> var b = 6;</p>
+        <p></p> var c = 7;</p>
+        <p> var s = (a + b + c) / 2; </p>
+        <p> var area = Math.sqrt(s * (s - a) * (s - b) * (s - c))</p>
+        <br>
+        <button type="button" onclick="calculateArea()">Calculate Area</button>
+        <p id="result1"></p>
+       </div>
+    <div class="main">
+  <br>
+     <form>
+        <h1>Multiplication and Division</h1>
+<input type="text" id="num1" placeholder="Enter first number">
+
+<input type="text" id="num2" placeholder="Enter second number">
+<br>
+<br>
+<button type="button" onclick="calculate('divide')">Divide</button>
+<button type="button" onclick="multiplicationNumbers()"> multiplication</button>
+<p id="result"></p>
+
+     </form>
+    </div>
+</body>
+</html>
+
+ 
